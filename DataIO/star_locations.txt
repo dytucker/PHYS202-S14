@@ -1,0 +1,137 @@
+# The image we counted is from http://imgsrc.hubblesite.org/hu/db/images/hs-2004-20-a-large_web.jpg.
+# The threshold value when converting to monochrome used was 600.
+# The algorythm was to:
+# 1. Get two coppies of the image.
+# 2. Pass the image into the count_location function.
+# 3. Store the image as color and as black and white in two seperate variables.
+# 4. Loop over all points of black and white image.
+# 5. If black pixel is encounter, incriment count by one and turn all connecting black pixels red.
+# 6. While turnign pixels black, check their brightness on the color copy of the image.
+# 7. If a pixel is brighter than brightesst pixel, brightest pixel = new pixel.
+# 8. Return number of stars and list of brightest point in each star.
+# The program takes 1.7 seconds to run.
+# 121 stars were found.
+# The data in the columns is organized as follows:
+# x-coordinate, y-coordinate, brightness of brightest pixel in each star.
+# x  y  brightness
+ 13 541 721
+ 12 228 742
+ 22 351 676
+ 33 199 623
+ 43   4 758
+ 56 228 729
+ 67 150 720
+ 78 141 729
+ 87 342 756
+ 84 440 734
+ 88 292 731
+ 87 336 600
+ 91   0 688
+ 97 502 606
+118 458 744
+121 360 673
+124 291 610
+142   2 641
+153 180 700
+156 504 619
+165 480 611
+169 268 711
+182 172 716
+188 346 627
+207 439 677
+218 189 736
+231 292 719
+235 333 601
+242 324 637
+243 447 628
+248 317 656
+262 410 726
+268 160 613
+289 295 658
+290 288 635
+290 374 698
+291 162 613
+315 320 743
+303  62 694
+315 208 719
+315 329 601
+317 565 726
+318  50 675
+325 426 733
+329  32 733
+333 308 746
+331 492 703
+337 295 722
+339 537 721
+340 111 602
+340 427 638
+343 301 722
+342 483 608
+356 504 738
+358 215 706
+370 380 718
+375   4 652
+384  72 712
+382 152 673
+382 183 624
+382 325 605
+416 194 702
+426 317 715
+425 360 603
+428 502 667
+435 399 616
+437 296 641
+437 467 602
+441 458 609
+451 123 609
+453 228 720
+472 408 730
+465  44 671
+478 267 725
+483 262 741
+496 342 661
+504 351 633
+509  69 735
+528  53 707
+526 230 658
+541 163 730
+531 355 718
+537 128 656
+548 249 667
+551 220 634
+555 126 633
+555 209 690
+559  11 710
+563 182 726
+568 330 688
+571 107 719
+582 235 605
+588 358 722
+603 273 651
+620 103 745
+619 306 621
+626  95 646
+632 225 703
+633 553 741
+660 313 733
+656 126 661
+659 425 603
+674 210 731
+671 284 688
+682 244 639
+694  80 604
+701 343 680
+723  34 633
+724 148 735
+727 130 652
+728 302 716
+744 220 644
+747 320 704
+751 361 698
+752 143 716
+758 235 695
+773  84 636
+780  53 726
+781 293 716
+782 449 686
+791 233 694

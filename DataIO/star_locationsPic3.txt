@@ -1,0 +1,98 @@
+# The image we counted is from http://imgsrc.hubblesite.org/hu/db/images/hs-1995-32-c-full_jpg.jpg.
+# The threshold value when converting to monochrome used was 600.
+# The algorythm was to:
+# 1. Get two coppies of the image.
+# 2. Pass the image into the count_location function.
+# 3. Store the image as color and as black and white in two seperate variables.
+# 4. Loop over all points of black and white image.
+# 5. If black pixel is encounter, incriment count by one and turn all connecting black pixels red.
+# 6. While turnign pixels black, check their brightness on the color copy of the image.
+# 7. If a pixel is brighter than brightesst pixel, brightest pixel = new pixel.
+# 8. Return number of stars and list of brightest point in each star.
+# The program takes 1.7 seconds to run.
+# 82 stars were found.
+# The data in the columns is organized as follows:
+# x-coordinate, y-coordinate, brightness of brightest pixel in each star.
+# x  y  brightness
+  0  14 694
+  0  20 741
+  2 286 764
+  3 350 764
+  5 423 755
+  6 364 758
+  5 344 646
+ 11  59 761
+ 17 391 764
+ 13 389 616
+ 16 236 612
+ 17  59 615
+ 18 387 620
+ 30 418 763
+ 37 447 753
+ 46  27 763
+ 47 232 700
+ 47 277 620
+ 51 441 762
+ 48 355 687
+ 58 403 762
+ 78  96 765
+ 69  29 607
+ 69 102 640
+ 69 119 613
+ 75 350 760
+ 93 205 630
+102 181 601
+110 324 765
+109   6 741
+108  57 610
+118 320 600
+128 350 764
+136 408 736
+137 361 605
+146   0 727
+153   0 624
+173  43 744
+174 388 603
+182  35 762
+193 202 764
+181 257 764
+183 118 764
+187 343 760
+189 364 651
+197 186 600
+229 456 741
+234 300 763
+240 127 762
+239 313 623
+238 372 620
+239 311 610
+243 365 760
+273 323 765
+277  16 765
+281  47 763
+272 315 605
+278 282 654
+279 315 633
+284 337 755
+288  21 615
+291 144 751
+303 147 764
+312  98 761
+309 200 632
+312 150 604
+318 427 761
+330 370 763
+330 106 717
+336 368 658
+349 387 763
+354 143 762
+353 383 604
+361   8 764
+363 211 688
+363 444 607
+368 433 765
+369   7 646
+373 232 702
+380 218 722
+382  71 760
+404 446 608

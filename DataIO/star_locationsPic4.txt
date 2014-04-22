@@ -1,0 +1,88 @@
+# The image we counted is from http://imgsrc.hubblesite.org/hu/db/images/hs-1993-13-a-large_web.jpg.
+# The threshold value when converting to monochrome used was 600.
+# The algorythm was to:
+# 1. Get two coppies of the image.
+# 2. Pass the image into the count_location function.
+# 3. Store the image as color and as black and white in two seperate variables.
+# 4. Loop over all points of black and white image.
+# 5. If black pixel is encounter, incriment count by one and turn all connecting black pixels red.
+# 6. While turnign pixels black, check their brightness on the color copy of the image.
+# 7. If a pixel is brighter than brightesst pixel, brightest pixel = new pixel.
+# 8. Return number of stars and list of brightest point in each star.
+# The program takes 1.7 seconds to run.
+# 72 stars were found.
+# The data in the columns is organized as follows:
+# x-coordinate, y-coordinate, brightness of brightest pixel in each star.
+# x  y  brightness
+  6 452 698
+ 35 313 763
+ 45 259 703
+ 72 394 761
+ 84 405 727
+101 625 733
+120 301 764
+124 436 735
+135 633 751
+150 252 679
+164 571 760
+174 532 764
+174 301 705
+175 338 759
+175 349 764
+204 454 760
+206 474 758
+214  17 695
+250 365 751
+253 298 763
+255 378 760
+276 146 720
+277 458 656
+285 177 762
+283 661 610
+302 390 760
+312 443 756
+323 401 761
+322 445 757
+337 436 605
+363 474 763
+356 446 660
+373 296 685
+374 437 741
+378 311 762
+391 409 764
+397 281 764
+403 421 749
+409 557 762
+430 440 756
+457 469 755
+455 542 651
+461 337 675
+466 437 754
+468 465 665
+478 350 762
+477 291 661
+482  58 763
+484 185 757
+509 501 764
+517 291 760
+520 432 677
+522 474 633
+525 201 762
+526 607 763
+543 509 759
+542 348 639
+560 401 724
+577 358 761
+583 147 752
+582 220 662
+591 223 761
+593 457 668
+605 307 758
+623 667 757
+645 552 759
+664 626 760
+680 407 762
+696 422 763
+734 266 697
+770 346 762
+796 484 702
