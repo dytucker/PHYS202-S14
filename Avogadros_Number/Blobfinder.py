@@ -1,6 +1,6 @@
 
 #usual opening stuff
-%pylab inline
+#%pylab inline
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -44,6 +44,8 @@ def monochrome(picture, threshold):
     white = (255, 255, 255)
     xsize, ysize = picture.size
     temp = picture.load()
+
+    
     for x in range(xsize):
         for y in range(ysize):
             r,g,b = temp[x,y]
@@ -59,8 +61,8 @@ def count(picture, counter, blob_list):
     function to fill in all the pixels connected to that one. Put the pixels into the blob in the fill function."""
     BLACK = (0,0,0)
     RED = (255,0,0)
-    xsize, ysize = picture.size
     temp = picture.load()
+    xsize, ysize = picture.size
     result = 0
     for x in range(xsize):
         for y in range(ysize):
@@ -81,13 +83,15 @@ def fill(picture, xsize, ysize, xstart, ystart,current_blob):
     coordinates of pixels that are neighbors of ones we have 
     already examined.  Keep looping until there's nothing 
     left in this list. When a pixel is filled in, put it into the blob"""
+    BLACK = (0,0,0)
+    RED = (255,0,0)
     queue = [(xstart,ystart)]
     while queue:
         x,y,queue = queue[0][0], queue[0][1], queue[1:]
         if picture[x,y] == BLACK:
             picture[x,y] = RED
             """if a point is red, add that point to the current blob we're working with"""
-            blobbert.add(x,y)
+            current_blob.add(x,y)
             if x > 0:
                 queue.append((x-1,y))
             if x < (xsize-1):
@@ -102,8 +106,8 @@ def BlobFinder(picture, tau):
     float(tau)
     blob_list = []
     monochrome(picture, tau)
-    slide = picture.load()
-    all_blobs = count(slide,fill,blob_list)
+    #slide = picture.load()
+    all_blobs = count(picture,fill,blob_list)
     
     return all_blobs
 
