@@ -16,11 +16,15 @@ class Blob():
         self.blobPoints.append((i,j));
     def getmass(self):
         self.mass = len(self.blobPoints)
-    def distanceTo(self,other_blob):
-        xdistance = self.centerOfMass[0] - other_blob.centerOfMass[0]
-        ydistance = self.centerOfMass[1] - other_blob.centerOfMass[1]
+    def distanceTo(self,com1,com2):
+        x1 = com1[0]
+        y1 = com1[1]
+        x2 = com2[0]
+        y2 = com2[1]
+        
 
-        self.distance = (xdistance**2 + ydistance**2)**0.5
+        self.distance = ((x2-x1)**2 + (y2-y1)**2)**0.5
+        return self.distance
         
     def getcenterOfMass(self):
         total = []
@@ -32,6 +36,7 @@ class Blob():
         xave =  float(xtot) / len(self.blobPoints)
         yave =  float(ytot) / len(self.blobPoints)   
         self.centerOfMass = [xave,yave]
+        return [xave,yave]
 
 #the monochrome function
 def monochrome(picture, threshold):
