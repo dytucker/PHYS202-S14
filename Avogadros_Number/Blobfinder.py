@@ -9,6 +9,7 @@ from StringIO import StringIO
 
 #Defining class Blob
 class Blob():
+    #initializes blob and sets its points to an empty list and mass to zero
     def __init__(self):
         self.blobPoints = []
         self.mass = 0
@@ -17,6 +18,7 @@ class Blob():
     def getmass(self):
         self.mass = len(self.blobPoints)
     def distanceTo(self,com1,com2):
+        #enter two arrays of the center of mass points for blob 1 and blob 2
         x1 = com1[0]
         y1 = com1[1]
         x2 = com2[0]
@@ -27,6 +29,7 @@ class Blob():
         return self.distance
         
     def getcenterOfMass(self):
+        #gets center of mass for each blob and also returns it (just in case)
         total = []
         xtot = 0
         ytot = 0
@@ -74,6 +77,7 @@ def count(picture, counter, blob_list):
             if temp[x,y] == BLACK:
                 result += 1
                 """create a new blob"""
+                #create and get the properties of each blob
                 blobbert = Blob()
                 fill(temp,xsize,ysize,x,y,blobbert)
                 blobbert.getmass()
@@ -108,6 +112,7 @@ def fill(picture, xsize, ysize, xstart, ystart,current_blob):
                 
 #The BlobFinder function
 def BlobFinder(picture, tau):
+    #finds all blobs in the picture using the luminesence threshold
     float(tau)
     blob_list = []
     monochrome(picture, tau)
