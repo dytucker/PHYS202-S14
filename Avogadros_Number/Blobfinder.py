@@ -91,7 +91,8 @@ def fill(picture, xsize, ysize, xstart, ystart,current_blob):
     but haven't yet been filled in - a list of the (x,y) 
     coordinates of pixels that are neighbors of ones we have 
     already examined.  Keep looping until there's nothing 
-    left in this list. When a pixel is filled in, put it into the blob"""
+    left in this list. When a 
+    pixel is filled in, put it into the blob"""
     BLACK = (0,0,0)
     RED = (255,0,0)
     queue = [(xstart,ystart)]
